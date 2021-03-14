@@ -1,0 +1,11 @@
+\BOOKMARK [2][-]{subsection.0.1}{项目记录：}{}% 1
+\BOOKMARK [2][-]{subsection.0.2}{KMeans算法}{}% 2
+\BOOKMARK [3][-]{subsubsection.0.2.1}{从结果来看，水速随着远离海岸下降还是必要的…思路回归的原因是无法通过AP聚类完成此类任务，也无法通过3-\\sigma等方式起到滤去远离海岸的点，甚至于，远离海岸是这个模型的主要结果。}{subsection.0.2}% 3
+\BOOKMARK [3][-]{subsubsection.0.2.2}{采用离散化方式}{subsection.0.2}% 4
+\BOOKMARK [3][-]{subsubsection.0.2.3}{数量减半，但我觉得还是好多}{subsection.0.2}% 5
+\BOOKMARK [3][-]{subsubsection.0.2.4}{最好的应该还是给个随距离的减少，因为有些点离水流的出发点还是太远了}{subsection.0.2}% 6
+\BOOKMARK [3][-]{subsubsection.0.2.5}{（下图单纯得找出了四舍五入后不是单个点的地方）}{subsection.0.2}% 7
+\BOOKMARK [3][-]{subsubsection.0.2.6}{AP聚类，结果不可靠，随缘，先放着，缺乏了极其重要的密度信息}{subsection.0.2}% 8
+\BOOKMARK [3][-]{subsubsection.0.2.7}{现在好了，现在经过权重和水速 下降后，数量少到可以进行AP聚类了}{subsection.0.2}% 9
+\BOOKMARK [2][-]{subsection.0.3}{水速下降模型}{}% 10
+\BOOKMARK [3][-]{subsubsection.0.3.1}{自定义水流下降模型}{subsection.0.3}% 11

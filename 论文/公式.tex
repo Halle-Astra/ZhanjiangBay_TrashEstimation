@@ -1,0 +1,104 @@
+% 中文CCT 论文模板
+%%   %后面的内容表示注释
+% 默认字体10pt,可选择11pt或12pt字体.
+% 论文、书籍、报告、信件格式分别为：article, cbook, creport, cletter.
+% 后面的内容表示注释
+
+%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% 以下文章环境、宏包等定义
+
+%\documentstyle[11pt]{carticle}
+\documentclass[12pt]{ctexart}  %%   格式选用
+\topmargin=-5mm \textwidth=148mm \textheight=235mm  %%   定义页边距s_n等
+\usepackage[centertags]{amsmath}   %%  命令\usepackage{**}表示导入需要使用的宏包**，可通过百度，得到实现什么功能需要导入的各类宏包，在此不一一介绍
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{cite}
+\usepackage{color}
+\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{extarrows}
+%\newenvironment{sequation}{\tiny\begin{table}}{\end{table}}
+\setcounter{section}{3}
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}  %% 利用\renewcommand{}可以定义章节、定理、命题等的编号方式
+%\renewcommand{\theequation}{\mbox{\arabic{section}.\arabic{equation}}}
+\newtheorem{Theorem}{\qquad  定理}[section] %% 利用\newtheorem{}{}[]可以定义定理、定义、命题等的格式
+\newtheorem{Coro}{\qquad 推论}[section]
+\newtheorem{Definition}{\qquad 定义}[section]
+%\newtheorem{Pro}[theorem]{\qquad 命题}[section]
+\newtheorem{Lemma}{\qquad 引理}[section]
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+%\renewcommand\sectionformat{\flushleft}
+%\renewcommand\sectionname{}
+\renewcommand\section{ 第\arabic{section}节}
+\renewcommand\subsection{\arabic{section}.\arabic{subsection}}
+\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}
+\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}
+\renewcommand{\tablename}{\wuhao\bf 表} %% 重新定义表头的大小
+\renewcommand{\figurename}{\wuhao 图} %% 重新定义图尾的大小
+\renewcommand{\refname}{\xiaosi\bf 参考文献} %% 重新定义参考文献标题的大小
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  以下开始文章撰写
+
+\begin{document}
+\thispagestyle{empty}  %% 表示本页无页码
+
+%%以下输入题目，\sanhao表示三号，\bf表示黑体  \begin{center}  **  \end{center} 表示** 居中
+
+
+\begin{center}
+{\sanhao\bf 习题5.5}
+\end{center}
+
+利用对于沿岸地区的分段处理,根据沿岸地区每一点的水流进行对垃圾的运输，以及水流速度进行多点垃圾相交从而得出垃圾分布点，再通过聚类分析得到垃圾预估聚集，假设有两条汇聚的水流，设水流起源点A为$(x_1,y_1)$,水流起源点B为$(x_2,y_2)$,水流的交点C为$(x_3,y_3)$。
+
+如图，由几何关系得：$\frac{CE}{BE}=\tan {\theta_2}=\frac {y_1-y_2}{x_3-x_2}$
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$\frac{CF}{AF}=\tan {\theta_1}=\frac {y_3-y_1}{x_3-x_1}$
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$\frac{CE}{DE}=\tan {\theta_1}=\frac {y_3-y_2}{x_3-x_D}$
+
+又$\therefore y_2=\tan {\theta_1 x_2}+b$
+
+~~~~~~~$y_3-y_2=\tan {\theta_2}(x_3-x_2)$
+
+~~~~~~~~~~~$\Rightarrow y_3=\tan {\theta_2}(x_3-x_2)+y_2$时
+
+由$\frac{CF}{AF}=\tan {\theta_1}$,有
+
+~~~~~~~$\frac {y_3-y_1}{x_3-x_1}=\frac{\tan {\theta_2}(x_3-x_2)+y_2-y_1}{x_3-x_1}=\tan {\theta_1}$
+
+~~~~~~~$\tan {\theta_2}(x_3-x_2)+y_2-y_1=\tan {\theta_1}(x_3-x_1)$
+
+~~~~~~~~~~~~~~~~~~~~~~~$x_3(\tan {\theta_2}-\tan {\theta_1})-\tan {\theta_2}x_2+\tan {\theta_1}x_1+y_2y_1=0$
+
+~~~~~~~~~~~~~~~~~~~~~~~$x_3=\frac{y_1-y_2-\tan {\theta_1}x_1+\tan {\theta_2}x_2}{\tan {\theta_2}-\tan {\theta_1}}$
+
+$y_3=\tan {\theta_2}(x_3-x_2)+y_2$直接带入$X_3$，
+
+最后得出水流聚集点$C $~$(x_3,y_3)$代值数学建模。
+
+
+
+
+
+
+
+
+\end{document}
